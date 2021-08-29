@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -8,8 +8,15 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeDetailComponent implements OnInit {
 
+  // @ViewChild('recipeDetailModal')
+  // detailModal!: ElementRef;
+
+  @Output() recipeModal! : ElementRef;
+
   @Input() recipe!: Recipe;
-  constructor() { }
+  constructor() { 
+
+  }
 
   ngOnInit(): void {
   }

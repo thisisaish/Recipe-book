@@ -1,8 +1,30 @@
-<div class="card" style="width: 15rem; margin-top: 20px;">
+<div class="card h-100" style="width: 15rem; margin-top: 20px;">
     <img [src]="recipe.imagePath" alt="" class="rounded img-responsive" style="max-height: 150px;">
     <div class="card-body text-center">
       <h5 class="card-title">{{recipe.title}}</h5>
-      <p class="card-text">{{recipe.description}}</p>
+      <p class="card-text"><small>{{recipe.description}}</small></p>
       <a href="#" class="btn btn-primary btn-sm" (click)="onRecipeSelected()">More details</a>              
     </div>            
 </div>
+<!-- <div class="card mb-3">
+  <img [src]="recipe.imagePath" class="card-img-top img-responsive rounded-start" alt="..." style="max-height: 150px;">
+  <div class="card-body">
+    <h5 class="card-title">{{recipe.title}}</h5>
+    <p class="card-text">{{recipe.description}}</p>
+    <a href="#" class="btn btn-primary btn-sm" (click)="onRecipeSelected()">More details</a>
+  </div>
+</div> -->
+<!-- <div class="card mb-3" style="max-width: 940px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="recipe.imagePath" class="img-responsive rounded-start" alt="..." style="max-height: 150px; max-width: 200px;">
+    </div>
+    <div class="col-md-10">
+      <div class="card-body">
+        <h6 class="card-title">{{recipe.title}}</h6>
+        <p class="card-text"><small>{{recipe.description}}</small></p>
+        <a href="#" class="btn btn-primary btn-sm" (click)="onRecipeSelected()">More details</a>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="container-fluid">
     <div class="col-xs-12 text-center">
         <img 
             [src]="recipe.imagePath" 
@@ -14,16 +14,31 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <div class="btn-group">
-            <button
-                type="button"
-                class="btn btn-primary dropdown-toggle">
-                Manage recipe <span class="caret"></span>
+        <!-- <div class="dropdown">
+            <button 
+                class="btn btn-secondary dropdown-toggle" 
+                type="button" 
+                data-toggle="dropdown" 
+                style="backgroundColor: rgb(255, 65, 65); border: 0pt;">
+              Manage recipe
             </button>
             <ul class="dropdown-menu">
-                <li><a href="#">To shopping list</a></li>
-                <li><a href="#">Edit recipe</a></li>
-                <li><a href="#">Delete recipe</a></li>
+              <li><a class="dropdown-item" href="#">To shopping list</a></li>
+              <li><a class="dropdown-item" href="#">Edit recipe</a></li>
+              <li><a class="dropdown-item" href="#">Delete recipe</a></li>
+            </ul>
+        </div> -->
+        <div class="dropdown">
+            <button 
+                type="button" 
+                class="btn btn-danger dropdown-toggle" 
+                data-toggle="dropdown">
+              Manage recipe
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">To shopping list</a></li>
+                <li><a class="dropdown-item" href="#">Edit recipe</a></li>
+                <li><a class="dropdown-item" href="#">Delete recipe</a></li>
             </ul>
         </div>
     </div>
@@ -38,3 +53,55 @@
         {{recipe.description}}
     </div>
 </div>
+<!-- <div class="modal" tabindex="-1" #recipeDetailModal>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ recipe.title }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-8 text-center">
+                    <img 
+                        [src]="recipe.imagePath" 
+                        alt="{{ recipe.title }}" 
+                        class = "img-fluid rounded"
+                        style="max-height: 300px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <h1>{{recipe.title}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="btn-group">
+                        <button
+                            type="button"
+                            class="btn btn-primary dropdown-toggle">
+                            Manage recipe <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">To shopping list</a></li>
+                            <li><a href="#">Edit recipe</a></li>
+                            <li><a href="#">Delete recipe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    Ingredients
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    {{recipe.description}}
+                </div>
+            </div>
+        </div>        
+      </div>
+    </div>
+</div> -->

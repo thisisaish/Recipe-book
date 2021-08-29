@@ -2,9 +2,16 @@
     <div class="col-md-5">
         <app-recipe-list (recipeWasSelected)="selectedRecipe = $event"></app-recipe-list>
     </div>
-    <div class="col-md-7" *ngIf="selectedRecipe">
-        <app-recipe-detail             
+    <div class="col-md-7" style="margin-top: 10px;">
+        <app-recipe-detail  
+            *ngIf="selectedRecipe; else noRecipeSelected"          
             [recipe]="selectedRecipe">
         </app-recipe-detail>
+        <ng-template #noRecipeSelected>
+            <div class="container text-center">
+                <img src="..\assets\pancake.png" alt="">
+                <p>You haven't selected any recipe!</p>
+            </div>
+        </ng-template>
     </div>
 </div>
