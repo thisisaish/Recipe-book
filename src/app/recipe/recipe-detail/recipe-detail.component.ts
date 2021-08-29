@@ -1,4 +1,6 @@
 import { Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Ingredient } from 'src/app/shared/ingredient.model';
+import { ShoppingListService } from 'src/app/shopping-list/shopping-list.service';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -14,11 +16,14 @@ export class RecipeDetailComponent implements OnInit {
   @Output() recipeModal! : ElementRef;
 
   @Input() recipe!: Recipe;
-  constructor() { 
+  constructor(private slService: ShoppingListService) {}
 
-  }
+  ngOnInit(): void { }
 
-  ngOnInit(): void {
+  addToShoppingList(ingredients: Ingredient[]){
+    ingredients.forEach(ing => {
+      this.slService.addNewIngredient(ing);
+    });
   }
 
 }

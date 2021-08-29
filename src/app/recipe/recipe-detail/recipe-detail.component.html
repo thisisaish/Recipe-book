@@ -14,20 +14,6 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <!-- <div class="dropdown">
-            <button 
-                class="btn btn-secondary dropdown-toggle" 
-                type="button" 
-                data-toggle="dropdown" 
-                style="backgroundColor: rgb(255, 65, 65); border: 0pt;">
-              Manage recipe
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">To shopping list</a></li>
-              <li><a class="dropdown-item" href="#">Edit recipe</a></li>
-              <li><a class="dropdown-item" href="#">Delete recipe</a></li>
-            </ul>
-        </div> -->
         <div class="dropdown">
             <button 
                 type="button" 
@@ -36,7 +22,7 @@
               Manage recipe
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">To shopping list</a></li>
+                <li><a class="dropdown-item" href="#" (click)="addToShoppingList(recipe.ingredients)">Add to shopping list</a></li>
                 <li><a class="dropdown-item" href="#">Edit recipe</a></li>
                 <li><a class="dropdown-item" href="#">Delete recipe</a></li>
             </ul>
