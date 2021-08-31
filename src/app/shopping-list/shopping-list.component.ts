@@ -22,4 +22,8 @@ export class ShoppingListComponent implements OnInit {
         }
       )
   }  
+
+  loadIngredient(ingredient: Ingredient){
+    this.shoppingListService.loadSelectedIngredient(ingredient);
+  }
 }

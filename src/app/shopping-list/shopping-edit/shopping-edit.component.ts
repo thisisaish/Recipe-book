@@ -15,15 +15,36 @@ export class ShoppingEditComponent implements OnInit {
   @ViewChild('ingredientAmt')
   amt!: ElementRef;
 
-  constructor(private shoppingListService: ShoppingListService) { }
+  constructor(private slService: ShoppingListService) { }
 
   ngOnInit(): void {
+    this.slService.selectedIngredient
+      .subscribe(
+        (ingredient: Ingredient) => {
+          this.name.nativeElement.value = ingredient.name;
+          this.amt.nativeElement.value = ingredient.amount;
+        }
+      )
   }
 
   onAddClicked(){
     const ingName = this.name.nativeElement.value;
     const ingAmt = this.amt.nativeElement.value;
     const newIng = new Ingredient(ingName, ingAmt);
-    this.shoppingListService.addNewIngredient(newIng);
+    this.slService.addNewIngredient(newIng);
+  }
+
+  onDelete(){
+    const ingName = this.name.nativeElement.value;
+    const ingAmt = this.amt.nativeElement.value;
+    if(ingName !== ""){
+      const newIng = new Ingredient(ingName, ingAmt);
+      
+    }
+  }
+
+  onClear(){
+    this.name.nativeElement.value = "";
+    this.amt.nativeElement.value = "";
   }
 }
