@@ -3,7 +3,7 @@
     <div class="card-body text-center">
       <h5 class="card-title">{{recipe.title}}</h5>
       <p class="card-text"><small>{{recipe.description}}</small></p>
-      <a href="#" class="btn btn-primary btn-sm" (click)="onRecipeSelected()">More details</a>              
+      <a style="cursor: pointer;" class="btn btn-primary btn-sm" [routerLink]="[index]">More details</a>              
     </div>            
 </div>
 <!-- <div class="card mb-3">
