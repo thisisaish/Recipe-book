@@ -11,18 +11,19 @@ import { RecipeService } from './recipe.service';
 export class RecipeComponent implements OnInit {
 
   // @Input() selectedRecipe!: Recipe;
-  selectedRecipe!: Recipe;
+  // selectedRecipe!: Recipe;
   @Input() detailModal! : ElementRef;
   
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
-    this.recipeService.recipeSelected
-      .subscribe(
-        (recipe: Recipe) => {
-          this.selectedRecipe = recipe;
-        }
-      )
+    // router link added instead
+    // this.recipeService.recipeSelected
+    //   .subscribe(
+    //     (recipe: Recipe) => {
+    //       this.selectedRecipe = recipe;
+    //     }
+    //   )
   }
 
   // onSelectRecipe(recipe: Recipe){
