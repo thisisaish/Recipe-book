@@ -25,8 +25,8 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
       )
   }  
 
-  loadIngredient(ingredient: Ingredient){
-    this.shoppingListService.loadSelectedIngredient(ingredient);
+  loadIngredient(index: number){
+    this.shoppingListService.loadSelectedIngredient(index);
   }
 
   ngOnDestroy(): void{
